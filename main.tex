@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+\input{preamble.tex}
+
+
+
+\begin{document}
+\title{Strategies in Resource Utilization with Degradation}
+% Need a nice title. 
+
+% Learning Optimal Strategies in Resource Extraction Problems
+
+% I feel like we need a better word for 'renewable' because it sounds too environmental
+% Resource Utilization, Asset Management, Degradation and Decentralization
+
+
+\author{Bryce L. Ferguson and Rohit Konda}
+% No Jason, this is us!
+
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Motivation}
+\label{sec:int}
+
+%%
+% Application domains to consider:
+% Vehicle Infrastructure
+% Cooperative Sensing and Communication
+% Behavior Planning
+%%
+
+% maybe we should stick to the term task assignment?
+
+In settings such as task assignment, sensor coverage, queuing, routing, etc., the effective utilization of our available resources can greatly improve system operation.
+% I think the above examples can be improved
+Often, as a resource is increasingly utilized, its current operating effectiveness is degraded.
+For example, a battery management system may have access to several power storage devices, such as the proposed ideas of vehicle-to-grid charging where EV batteries can be used to store and supply power to a local grid.
+As a battery is used, its charge is depleted making it less valuable as a power source; further, in the case of the vehicle-to-grid charging scheme, it becomes less valuable as a car power supply.
+Alternatively, on a taxi/ride-sharing platform, one can think of areas of high demand as resources. 
+As vehicles are incentivized or assigned to service passengers in an area, the demand of that area drops, potentially lessening the value of having so many vehicles in the area as opposed to others.
+These examples both highlight the fact that resource allocation/utilization is a dynamic process and effectively utilizing resources means adaptively changing how resources are allocated.
+
+With this in mind, we propose the study of dynamic resource allocation problems in which a resources value degrades as it is utilized.
+Deriving algorithms which optimally utilize degradable resources will prove valuable in improving the operation of complex systems such as battery networks, spatial dynamic sensor coverage, ride sharing applications, dynamic server queuing, natural resource harvesting, and many more.
+In this pursuit, several important questions emerge:
+
+
+% Resource allocation has been a largely studied problem to ensure systems make effective use of their assets, e.g., sensor coverage, task assignment, servers/queuing, parallel processing, etc.
+% Often as these resources are utilized, their effectiveness or value degrades. 
+% I think we should think of two examples and spell them out very clearly, then briefly mention a couple others. I think the ride sharing is good
+%For example, with a system that has access to several batteries/power sources (perhaps a large infrastructure with multiple power banks, an electric vehicle charging station being used as a Vehicle-to-Grid/Home battery, or a device with several batteries switched in parallel), as a battery is used more, its current energy depletes in the short term and its charge-holding capabilities deplete in the long term.
+% Or another example: a group of sensors covering an area (perhaps cameras detecting an area) as an area is sensed for longer, less information is collected from it.
+% Or: a fleet of taxis/ride-sharing vehicles can service drivers in areas with high demand, but as the demand is serviced, the surge pricing is reduced.
+% Or: environmental/renewable resources
+% There has been progress in task assignment when the objective is static, but the dynamic nature of resources values has largely been overlooked
+% As such, we propose the study of task assignment algorithms in dynamic environments, with particular focus on understanding (1) How to optimize in a dynamic/adaptive environment, (2) The effect of decentralized decision making, and (3) How uncertainty about the horizon of resource values affects design and performance.
+% Study of renewable resources are important. 
+% Model a wide variety of important applications, such as batteries, spatial dynamic sensor coverage, ride sharing applications etc.
+
+% \emph{Example. Efficient Battery Utilization} % feel free to replace
+
+% \emph{Example. Optimal Coverage of Ride-Sharing}
+
+\noindent\textit{How do we optimally utilize resources which are affected by our actions?} If we take degrade a resource as we use it, but it returns as we stop using it, how do we optimize the long run performance of this
+
+\noindent\textit{What impact does decentralized decision making have on the system?} If resources are shared among many users, perhaps in an environmental setting or in a ride sharing app, how do the selfish decisions of users affect the performance
+
+\noindent\textit{How does uncertainty in a resources future value affect design and performance?} If we do not know how a resource will degrade (higher probability of error with higher loads), then how can we optimize and learn
+
+\noindent\textit{How do restrictions on agent decisions impact resource utilitization?} If we have restrictions (e.g.,  drivers assigned to different areas or team members or servers or any mis-match), then how do we optimize
+
+
+
+% I am proposing a change of structure where we reduce to two sections, combine the problem setting and innovation, and move the questions to the motivation
+\section{Problem Setting and Innovations}
+% summary of dynamic resource allocation problem
+% Question and implications
+
+% I like this paragraph a lot (and moved it up), may recommend a few wording changes later, but I like the tie in.
+We take inspiration from \emph{fishery games} in economics that study economic problems of resource extraction and resource utilization from a common good and social policy perspective. Our innovation is that we can use tools from control theory and reinforcement learning to address these problems which are fundamental and natural problems to consider in a engineering realms.
+
+The method to address these examples is through generalizing the common models of task assignment problems, where we call our generalization \emph{resource extraction problems}. 
+
+Lets consider a set of resources that agents can use. These can be common goods, or private to agents. Agents can utilize these resources at a time, and can derive benefit from accessing these resources. However, utilizing these resources can affect the availability and quantity of the resource in the future. In this sense, greedy utilization in the short term by agents can lead to scarcity in the long-term. Thus, agents must consider a natural trade-off, in which they must balance short and long-term gains when utilizing resources. We would like to examine the strategies that agents must do so in a wide variety of instances.
+
+In this framework, we study a system of agents or entities that are able to decide on the resource they would like utilize at a given time point. These decisions are constrained by either the spatial location of the agent or limitations on effort by the agent. Then at each time point, agents utilities a subset of resources that they would like to use. When using these resources, naturally the agent derive some benefit; however the availability of that resource will decrease. This is a quite general setup which can model a variety of problem instances. We introduce a number of questions that we would like to answer.
+
+
+
+% quick description of task assignment or resource allocation problem, avoid math
+
+% There are some important questions.
+
+% \begin{enumerate}
+%     \item How do we optimally utilize resources which are affected by our actions?
+%     \item What impact does decentralized decision making have on the system?
+%     \item How does uncertainty in a resources future value affect design and performance?
+%     % \item what about spatial considerations?
+% \end{enumerate}
+
+
+
+
+
+% % Do we need references for the first one?
+% \bibliographystyle{ieeetr}
+% \bibliography{references.bib}
+\end{document}
