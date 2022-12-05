@@ -10,15 +10,16 @@
 
 
 \begin{document}
-\title{Designing Efficient Strategies in Resource Utilization with Degradation}
+\title{Designing Efficient Algorithms in Resource Utilization with Degradation}
 \author{Bryce L. Ferguson and Rohit Konda}
 
 \maketitle
 \thispagestyle{empty}
 
-The main thesis of this research proposal is on the design and analysis of adaptive algorithms that dictate utilization of resources in a dynamical setting. Distinctive to this setting is that when a resource is increasingly utilized, its current operating quality degrades more, and thus effective algorithms must manage this fundamental trade-off. Providing good algorithms in this framework has deep implications in various application domains. For example, consider rider-sharing platforms; these services have become ubiquitous, and so operating these platforms in an efficient manner is vital for rider satisfaction and minimizing usage costs. 
+The main thesis of this research proposal is on the design and analysis of adaptive algorithms that dictate the utilization of resources whose quality may be dynamic. A distinct feature of this setting is that as a resource is utilized, its current operating quality degrades. As such, effective algorithms must manage the short-term long-term trade-off. 
 
-Rider-sharing platforms inherit this trade-off from the following perspective. Drivers span through areas of an urban landscape depending on the present rider demand. Rider demand (modeled as a resource of un-serviced riders) in areas that are serviced by drivers are expected to decrease while areas that are not serviced are expected to accumulate a surplus of rider demand. As such, desirable routing mechanisms for drivers should adaptively allocate drivers in response to the dynamic current rider demand, while also managing possible future demand. Managing this fundamental trade-off of resource utilization appears in various other application domains as well, including battery power storage/utilization, server queuing, task-assignment, renewable energy sources, and more.
+Providing good algorithms in this framework has deep implications in various application domains. For example, consider ride-sharing platforms; these services have become ubiquitous, and so operating these platforms in an efficient manner is vital for rider satisfaction and minimizing usage costs. 
+Ride-sharing platforms inherit this trade-off from the following perspective. Drivers span through areas of an urban landscape depending on the present rider demand. Rider demand (modeled as a resource of un-serviced riders) in areas that are serviced by drivers are expected to decrease while areas that are not serviced are expected to accumulate a surplus of rider demand. As such, desirable routing mechanisms for drivers should adaptively allocate drivers in response to the dynamic current rider demand, while also managing possible future demand. Managing this fundamental trade-off of resource utilization appears in various other application domains as well, including battery power storage/utilization, server queuing, task-assignment, renewable energy sources, and more.
 
 With this in mind, we propose to study a general dynamic resource utilization problem where a resource's quality degrades as a function of its utilization. We take inspiration from \emph{fishery games} that were studied in the economics literature in the 1980's, where the emphasis  was on protecting a common resource from over-utilization. However, in our work, we focus on questions on resource-utilization from a novel engineering perspective. This new perspective offers new opportunities for applying relevant tools but also new challenges presented by the engineering problem domains.
 
